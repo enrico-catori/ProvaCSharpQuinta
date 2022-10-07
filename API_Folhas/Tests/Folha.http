@@ -1,0 +1,30 @@
+### Cadastrar uma folha
+POST https://localhost:5001/api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "folhaPagamentoId": 2,
+    "funcionarioId": 2,
+    "valorHora": 75,
+    "quantidadeHoras": 55
+}
+
+###
+GET https://localhost:5001/api/folha/filtrar/10/2022
+
+### Listar folhas
+GET https://localhost:5001/api/folha/listar
+
+### Deletar uma folha
+DELETE https://localhost:5001/api/folha/deletar/1
+
+### Alterar um funcionário
+PATCH https://localhost:5001/api/folha/alterar
+Content-Type: application/json
+
+{
+    "folhaPagamentoId" : 1,
+    "funcionarioId" : 1,
+    "valorHora" : 250,
+    "quantidadeHoras":  39
+}
