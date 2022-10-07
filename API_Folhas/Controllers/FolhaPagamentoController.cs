@@ -39,24 +39,24 @@ namespace API_Folhas.Controllers
             folha.SalarioBruto = folha.ValorHora * folha.QuantidadeHoras;
 
             // ImpostoRenda
-            if (folha.SalarioBruto <= 1903.38)
+            if (folha.SalarioBruto <= 1903.98)
             {
                 folha.ImpostoRenda = 0;
             } 
-            else if (folha.SalarioBruto > 1903.99 && folha.SalarioBruto <= 2826.65)
+            else if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto <= 2826.65)
             {
-                folha.ImpostoRenda = 142.8;
+                folha.ImpostoRenda = (folha.SalarioBruto * 0.075) - 142.8;
             } 
-            else if (folha.SalarioBruto > 2826.66 && folha.SalarioBruto <= 3751.05)
+            else if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
-                folha.ImpostoRenda = 354.8;
+                folha.ImpostoRenda = (folha.SalarioBruto * 0.15) - 354.8;
             } 
-            else if (folha.SalarioBruto > 3751.06 && folha.SalarioBruto <= 4664.68)
+            else if (folha.SalarioBruto >= 3751.06 && folha.SalarioBruto <= 4664.68)
             {
-                folha.ImpostoRenda = 636.13;
+                folha.ImpostoRenda = (folha.SalarioBruto * 0.225) - 636.13;
             } 
             else {
-                folha.ImpostoRenda = 869.36;
+                folha.ImpostoRenda = (folha.SalarioBruto * 0.275) - 869.36;
             }
 
             // INSS

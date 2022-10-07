@@ -3,10 +3,10 @@ POST https://localhost:5001/api/folha/cadastrar
 Content-Type: application/json
 
 {
-    "folhaPagamentoId": 2,
-    "funcionarioId": 2,
-    "valorHora": 75,
-    "quantidadeHoras": 55
+    "folhaPagamentoId": 1,
+    "funcionarioId": 1,
+    "valorHora": 50,
+    "quantidadeHoras": 100
 }
 
 ###
